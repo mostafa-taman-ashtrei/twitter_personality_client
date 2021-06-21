@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Stack, Spinner } from '@chakra-ui/react';
+import { Stack, Spinner, useToast } from '@chakra-ui/react';
 import axios from 'axios';
 
 import Navbar from './components/NavBar';
@@ -8,10 +8,11 @@ import Analysis from './components/Analysis';
 import { AnalysisData } from './types';
 
 const App: React.FC = () => {
-    const [username, setUsername] = useState<string>('');
+    const [username, setUsername] = useState<string>('@');
     const [loading, setloading] = useState<boolean>(false);
     const [showAnalysis, setShowAnalysis] = useState<boolean>(false);
     const [data, setData] = useState<AnalysisData[]>([]);
+    const Toast = useToast();
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -24,6 +25,16 @@ const App: React.FC = () => {
             setData(res.data.data);
         } catch (err) {
             console.log(err);
+            setShowAnalysis(false);
+            setData([]);
+            setloading(false);
+            Toast({
+                title: 'Failed',
+                description: 'A server error occured try another handle',
+                status: 'error',
+                duration: 9000,
+                isClosable: true,
+            });
         }
     };
 
@@ -37,7 +48,6 @@ const App: React.FC = () => {
                     handleSubmit={handleSubmit}
                 />
                 {
-                    // eslint-disable-next-line no-nested-ternary
                     !loading
                         ? showAnalysis
                             ? <Analysis data={data} />

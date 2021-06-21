@@ -23,7 +23,7 @@ const Search: React.FC<props> = ({ username, setUsername, handleSubmit }: props)
             <Input
                 w="md"
                 boxShadow="lg"
-                variant="filled"
+                variant="outline"
                 placeholder="twitter handle i.e @john doe"
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
