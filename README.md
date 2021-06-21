@@ -1,6 +1,41 @@
-# Getting Started with Create React App
+# TWITTER PERSONALITY ANALYSIS
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+An app that performs personality analysis based in a users recent tweets. The app uses the official twitter api and the watson api to perform the analysis
+
+### Languages and Tools Used:
+
+- <img  alt="Visual Studio Code" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/visual-studio-code/visual-studio-code.png" /> vs code
+
+
+- <img   alt="Typescript" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/typescript/typescript.png" /> Typescript
+
+
+
+
+- <img   alt="Node.js" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png" /> React.js
+
+
+- <img   alt="Git" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/git/git.png" /> Git
+
+- <img   alt="eslint" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/eslint/eslint.png" /> eslint
+
+<br />
+
+# Getting Started
+
+These instructions will get the project up and running on your local machine for development 
+
+## Installation
+1. clone the project using git or download zip
+```bash
+git clone https://github.com/neoScriptscode/twitter_personality_client.git
+```
+2. Be sure to install the backend https://github.com/neoScriptscode/twitter_personality_server here and run it on port 8080
+
+3.  run 
+```bash
+cd twitter_personality_client && npm i
+```
 
 ## Available Scripts
 
@@ -38,9 +73,3 @@ If you aren’t satisfied with the build tool and configuration choices, you can
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
